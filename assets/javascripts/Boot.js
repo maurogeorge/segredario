@@ -5,6 +5,7 @@ Segredario.Boot.prototype = {
 
   preload: function() {
     this.load.image('preload-bar', 'assets/images/preload-bar.png');
+    this.load.image('logo', 'assets/images/phaser.png');
   },
 
   create: function() {
@@ -15,5 +16,7 @@ Segredario.Boot.prototype = {
     this.scale.pageAlignVertically = true;
 
     this.game.physics.startSystem(Phaser.Physics.ARCADE);
+
+    this.state.start('Preload');
   }
 };
