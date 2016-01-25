@@ -13,16 +13,16 @@ Segredario.Preload.prototype = {
   },
 
   logo: function() {
-    this.logo = this.add.sprite(this.world.centerX,
-                                this.world.centerY, 'logo');
-    this.logo.anchor.setTo(0.5);
+    var logo = this.add.sprite(this.game.world.centerX,
+                               this.game.world.centerY, 'logo');
+    logo.anchor.setTo(0.5);
   },
 
   preloadBar: function() {
-    this.preloadBar = this.add.sprite(this.game.world.centerX,
-                                      this.game.world.centerY, 'preload-bar');
-    this.preloadBar.anchor.setTo(0.5, -11);
-    this.preloadBar.scale.setTo(7, 2);
-    this.load.setPreloadSprite(this.preloadBar);
+    var preloadBar = this.add.sprite(this.game.world.centerX,
+                                     this.game.world.centerY, 'preload-bar');
+    preloadBar.anchor.setTo(0.5, -11);
+    preloadBar.scale.setTo(7, 2);
+    this.load.setPreloadSprite(preloadBar);
   }
 };
