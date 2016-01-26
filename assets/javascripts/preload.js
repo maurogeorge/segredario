@@ -6,10 +6,11 @@ Segredario.Preload.prototype = {
   preload: function() {
     this.logo();
     this.preloadBar();
+    this.loadGameAssets();
   },
 
   create: function() {
-
+    this.state.start('Game');
   },
 
   logo: function() {
@@ -24,5 +25,9 @@ Segredario.Preload.prototype = {
     preloadBar.anchor.setTo(0.5, -11);
     preloadBar.scale.setTo(7, 2);
     this.load.setPreloadSprite(preloadBar);
+  },
+
+  loadGameAssets: function() {
+    this.game.load.spritesheet('player', 'assets/sprites/player.png', 32, 48);
   }
 };
