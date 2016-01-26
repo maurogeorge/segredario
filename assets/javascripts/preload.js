@@ -28,6 +28,6 @@ Segredario.Preload.prototype = {
   },
 
   loadGameAssets: function() {
-    this.game.load.spritesheet('player', 'assets/sprites/player.png', 32, 48);
+    this.game.load.spritesheet('player', 'assets/sprites/player.png', 16, 32);
   }
 };

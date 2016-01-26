@@ -17,6 +17,5 @@ Segredario.Game.prototype = {
 
   createPlayer: function() {
     this.player = this.game.add.sprite(100, 300, 'player');
-    this.player.frame = 5;
   }
 };
