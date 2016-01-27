@@ -12,10 +12,10 @@ Segredario.Game.prototype = {
   },
 
   render: function() {
-    this.game.debug.text(this.game.time.fps || '--', 20, 70, "#00ff00", "40px Courier");
+    this.game.debug.text(this.game.time.fps || '--', 20, 40, "#00ff00", "16px Courier");
   },
 
   createPlayer: function() {
-    this.player = this.game.add.sprite(100, 300, 'player');
+    this.player = this.game.add.sprite(10, 180, 'player');
   }
 };
