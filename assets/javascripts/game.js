@@ -8,6 +8,7 @@ Segredario.Game.prototype = {
   },
 
   create: function() {
+    this.createLevel();
     this.createPlayer();
   },
 
@@ -16,6 +17,13 @@ Segredario.Game.prototype = {
   },
 
   createPlayer: function() {
-    this.player = this.game.add.sprite(10, 180, 'player');
+    var player = this.game.add.sprite(10, 176, 'player');
+  },
+
+  createLevel: function() {
+    var level = this.game.add.tilemap('level');
+    level.addTilesetImage('super_mario_bros', 'tiles');
+    level.createLayer('backgroundLayer');
+    level.createLayer('blockedLayer');
   }
 };
