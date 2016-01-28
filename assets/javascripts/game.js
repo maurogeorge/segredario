@@ -27,8 +27,21 @@ Segredario.Game.prototype = {
   createPlayer: function() {
     this.player = this.game.add.sprite(10, 176, 'player');
     this.game.physics.arcade.enable(this.player);
-    this.player.body.gravity.y = 300;
     this.game.camera.follow(this.player);
+
+    this.createPlayerPhysics();
+    this.createPlayerAnimations();
+  },
+
+  createPlayerPhysics: function() {
+    this.player.body.bounce.y = 0.2;
+    this.player.body.gravity.y = 300;
+    this.player.body.collideWorldBounds = true;
+  },
+
+  createPlayerAnimations: function(){
+    this.player.animations.add('right', [1, 2, 3], 10, true);
+    this.player.animations.add('left', [1, 2, 3], 10, true);
   },
 
   playerResetVelocity: function() {
@@ -36,21 +49,31 @@ Segredario.Game.prototype = {
   },
 
   playerStand: function() {
+    this.player.animations.stop();
     this.player.frame = 0;
   },
 
   playerMoveLeft: function() {
     this.player.body.velocity.x = -80;
+    this.player.scale.x = -1;
+    this.player.animations.play('left');
   },
 
   playerMoveRight: function() {
     this.player.body.velocity.x = 80;
+    this.player.scale.x = 1;
+    this.player.animations.play('right');
   },
 
   playerJump: function() {
+    this.player.frame = 5;
     if(this.player.body.blocked.down) {
       this.player.body.velocity.y = -200;
     }
+  },
+
+  playerDuck: function() {
+    this.player.frame = 6;
   },
 
   movePlayer: function() {
@@ -65,6 +88,8 @@ Segredario.Game.prototype = {
 
     if (this.cursors.up.isDown) {
       this.playerJump();
+    } else if (this.cursors.down.isDown) {
+      this.playerDuck();
     }
   },
 
