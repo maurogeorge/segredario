@@ -108,6 +108,9 @@ Segredario.Game.prototype = {
 
     this.level.setCollisionBetween(1, 900, true, 'blockedLayer');
     backgroundLayer.resizeWorld();
+
+    var bmg = this.game.add.audio('level', 1, true);
+    bmg.play();
   },
 
   createCoins: function() {

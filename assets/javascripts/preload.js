@@ -34,5 +34,6 @@ Segredario.Preload.prototype = {
     this.load.image('tiles', 'assets/tilemaps/tiles/super_mario_bros.png');
     this.load.spritesheet('coin', 'assets/tilemaps/tiles/super_mario_bros.png', 16, 16);
     this.load.audio('coin', 'assets/audios/sound_effects/coin.wav');
+    this.load.audio('level', 'assets/audios/sound_effects/coin.wav');
   }
 };
