@@ -16,6 +16,7 @@ Segredario.Game.prototype = {
 
   update: function(){
     this.game.physics.arcade.collide(this.player, this.blockedLayer, this.playerHit, null, this);
+    this.game.physics.arcade.overlap(this.player, this.coins, this.coinCollect, null, this);
 
     this.movePlayer();
 
@@ -110,9 +111,13 @@ Segredario.Game.prototype = {
   },
 
   createCoins: function() {
-    var coins = this.game.add.group();
-    coins.enableBody = true;
-    this.level.createFromObjects('objectsLayer', 58, 'coin', 57, true, false, coins);
+    this.coins = this.game.add.group();
+    this.coins.enableBody = true;
+    this.level.createFromObjects('objectsLayer', 58, 'coin', 57, true, false, this.coins);
+  },
+
+  coinCollect: function(player, coin) {
+    coin.kill();
   },
 
   createCursors: function() {
