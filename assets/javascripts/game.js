@@ -103,7 +103,7 @@ Segredario.Game.prototype = {
     var backgroundLayer = level.createLayer('backgroundLayer');
     this.blockedLayer = level.createLayer('blockedLayer');
 
-    level.setCollisionBetween(1, 100, true, 'blockedLayer');
+    level.setCollisionBetween(1, 900, true, 'blockedLayer');
     backgroundLayer.resizeWorld();
   },
 
