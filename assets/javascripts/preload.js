@@ -32,5 +32,6 @@ Segredario.Preload.prototype = {
     this.load.tilemap('level', 'assets/tilemaps/maps/super_mario_bros.json',
                                 null, Phaser.Tilemap.TILED_JSON);
     this.load.image('tiles', 'assets/tilemaps/tiles/super_mario_bros.png');
+    this.load.spritesheet('coin', 'assets/tilemaps/tiles/super_mario_bros.png', 16, 16);
   }
 };

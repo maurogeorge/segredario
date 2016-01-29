@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="15" tilewidth="16" tileheight="16" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="15" tilewidth="16" tileheight="16" nextobjectid="6">
  <tileset firstgid="1" name="super_mario_bros" tilewidth="16" tileheight="16" tilecount="924" columns="33">
   <image source="../tiles/super_mario_bros.png" width="528" height="448"/>
  </tileset>
@@ -60,5 +60,21 @@
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 </data>
  </layer>
- <objectgroup name="objectsLayer"/>
+ <objectgroup name="objectsLayer">
+  <object id="1" name="coin" gid="58" x="223.667" y="128.333" width="16" height="16">
+   <properties>
+    <property name="type" value="coin"/>
+   </properties>
+  </object>
+  <object id="2" name="coin" gid="58" x="240" y="127.667" width="16" height="16">
+   <properties>
+    <property name="type" value="coin"/>
+   </properties>
+  </object>
+  <object id="5" name="coin" gid="58" x="208.333" y="127.667" width="16" height="16">
+   <properties>
+    <property name="type" value="coin"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

@@ -9,6 +9,7 @@ Segredario.Game.prototype = {
 
   create: function() {
     this.createLevel();
+    this.createCoins();
     this.createPlayer();
     this.createCursors();
   },
@@ -97,15 +98,21 @@ Segredario.Game.prototype = {
   },
 
   createLevel: function() {
-    var level = this.game.add.tilemap('level');
-    level.addTilesetImage('super_mario_bros', 'tiles');
+    this.level = this.game.add.tilemap('level');
+    this.level.addTilesetImage('super_mario_bros', 'tiles');
 
-    var backgroundLayer = level.createLayer('backgroundLayer');
-    level.createLayer('backgroundElementsLayer');
-    this.blockedLayer = level.createLayer('blockedLayer');
+    var backgroundLayer = this.level.createLayer('backgroundLayer');
+    this.level.createLayer('backgroundElementsLayer');
+    this.blockedLayer = this.level.createLayer('blockedLayer');
 
-    level.setCollisionBetween(1, 900, true, 'blockedLayer');
+    this.level.setCollisionBetween(1, 900, true, 'blockedLayer');
     backgroundLayer.resizeWorld();
+  },
+
+  createCoins: function() {
+    var coins = this.game.add.group();
+    coins.enableBody = true;
+    this.level.createFromObjects('objectsLayer', 58, 'coin', 57, true, false, coins);
   },
 
   createCursors: function() {
