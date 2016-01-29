@@ -101,6 +101,7 @@ Segredario.Game.prototype = {
     level.addTilesetImage('super_mario_bros', 'tiles');
 
     var backgroundLayer = level.createLayer('backgroundLayer');
+    level.createLayer('backgroundElementsLayer');
     this.blockedLayer = level.createLayer('blockedLayer');
 
     level.setCollisionBetween(1, 900, true, 'blockedLayer');
