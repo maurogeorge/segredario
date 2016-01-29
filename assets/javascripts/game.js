@@ -114,9 +114,11 @@ Segredario.Game.prototype = {
     this.coins = this.game.add.group();
     this.coins.enableBody = true;
     this.level.createFromObjects('objectsLayer', 58, 'coin', 57, true, false, this.coins);
+    this.coinSound = this.game.add.audio('coin');
   },
 
   coinCollect: function(player, coin) {
+    this.coinSound.play();
     coin.kill();
   },
 
