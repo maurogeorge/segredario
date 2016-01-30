@@ -1,3 +1,5 @@
+"use strict";
+
 var Segredario = Segredario || {};
 Segredario.Boot = function() {};
 

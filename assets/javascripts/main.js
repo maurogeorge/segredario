@@ -1,3 +1,5 @@
+"use strict";
+
 var Segredario = Segredario || {};
 
 Segredario.game = new Phaser.Game(256, 240, Phaser.AUTO, '');
