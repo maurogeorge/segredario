@@ -22,6 +22,7 @@ Segredario.Game.prototype = {
     this.game.physics.arcade.collide(this.player, this.blockedLayer, this.playerHit, null, this);
     this.game.physics.arcade.overlap(this.player, this.coins, this.coinCollect, null, this);
     this.game.physics.arcade.collide(this.player, this.goombas, this.goombaHit, null, this);
+    this.game.physics.arcade.collide(this.goombas, this.blockedLayer, null, null, this);
 
     for (let npc of this.npcs) {
       this.game.physics.arcade.overlap(this.player, this[npc['name']], this.npcAction, null, this);
