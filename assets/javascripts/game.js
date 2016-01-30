@@ -140,6 +140,26 @@ Segredario.Game.prototype = {
     this.goombas = this.game.add.group();
     this.goombas.enableBody = true;
     this.level.createFromObjects('objectsLayer', 911, 'goomba', 0, true, false, this.goombas);
+
+    for (let goomba of this.goombas.children) {
+      this.createGoombaPhysics(goomba);
+      this.createGoombaAnimations(goomba);
+    }
+  },
+
+  createGoombaPhysics: function(goomba) {
+    this.game.physics.enable(goomba, Phaser.Physics.ARCADE);
+    this.game.physics.arcade.moveToXY(goomba, 0, 0, 10);
+
+    goomba.body.immovable = false;
+    goomba.body.collideWorldBounds = true;
+    goomba.body.bounce.setTo(1, 1);
+    goomba.body.gravity.y = 300;
+  },
+
+  createGoombaAnimations: function(goomba) {
+    goomba.animations.add('move', [0, 1], 5, true);
+    goomba.animations.play('move');
   },
 
   goombaHit: function(player, goomba) {
