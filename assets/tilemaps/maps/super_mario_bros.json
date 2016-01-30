@@ -117,6 +117,38 @@
                  "width":16,
                  "x":144,
                  "y":208
+                }, 
+                {
+                 "gid":911,
+                 "height":16,
+                 "id":8,
+                 "name":"goomba",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":288,
+                 "y":208
+                }, 
+                {
+                 "gid":911,
+                 "height":16,
+                 "id":9,
+                 "name":"goomba",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":400,
+                 "y":208
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -125,7 +157,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":8,
+ "nextobjectid":10,
  "orientation":"orthogonal",
  "properties":
     {
