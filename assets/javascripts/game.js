@@ -1,3 +1,5 @@
+"use strict";
+
 var Segredario = Segredario || {};
 Segredario.Game = function() {};
 
@@ -10,7 +12,7 @@ Segredario.Game.prototype = {
   create: function() {
     this.createLevel();
     this.createCoins();
-    this.createCayo();
+    this.createNPCs();
     this.createPlayer();
     this.createCursors();
   },
@@ -18,7 +20,10 @@ Segredario.Game.prototype = {
   update: function(){
     this.game.physics.arcade.collide(this.player, this.blockedLayer, this.playerHit, null, this);
     this.game.physics.arcade.overlap(this.player, this.coins, this.coinCollect, null, this);
-    this.game.physics.arcade.overlap(this.player, this.cayo, this.cayoAction, null, this);
+
+    for (let npc of this.npcs) {
+      this.game.physics.arcade.overlap(this.player, this[npc['name']], this.npcAction, null, this);
+    }
 
     this.movePlayer();
 
@@ -128,14 +133,24 @@ Segredario.Game.prototype = {
     coin.kill();
   },
 
-  createCayo: function() {
-    this.cayo = this.game.add.group();
-    this.cayo.enableBody = true;
-    this.level.createFromObjects('objectsLayer', 698, 'cayo', 0, true, false, this.cayo);
+  npcs: [
+    { gid: 698, name: 'cayo' },
+    { gid: 672, name: 'matheus' }
+  ],
+
+  createNPCs: function() {
+    for (let npc of this.npcs) {
+      var name = npc['name']
+      var gid = npc['gid']
+
+      this[name] = this.game.add.group();
+      this[name].enableBody = true;
+      this.level.createFromObjects('objectsLayer', gid, name, 0, true, false, this[name]);
+    }
   },
 
-  cayoAction: function(player, cayo) {
-    cayo.frame = 1;
+  npcAction: function(player, npc) {
+    npc.frame = 1;
   },
 
   createCursors: function() {

@@ -101,6 +101,22 @@
                  "width":15,
                  "x":90,
                  "y":208
+                }, 
+                {
+                 "gid":672,
+                 "height":24,
+                 "id":7,
+                 "name":"matheus",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":144,
+                 "y":208
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -109,7 +125,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":7,
+ "nextobjectid":8,
  "orientation":"orthogonal",
  "properties":
     {
