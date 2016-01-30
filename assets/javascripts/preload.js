@@ -33,6 +33,7 @@ Segredario.Preload.prototype = {
                                 null, Phaser.Tilemap.TILED_JSON);
     this.load.image('tiles', 'assets/tilemaps/tiles/super_mario_bros.png');
     this.load.spritesheet('coin', 'assets/tilemaps/tiles/super_mario_bros.png', 16, 16);
+    this.load.spritesheet('cayo', 'assets/sprites/cayo.png', 15, 24);
     this.load.audio('coin', 'assets/audios/sound_effects/coin.wav');
     this.load.audio('level', 'assets/audios/sound_effects/coin.wav');
   }

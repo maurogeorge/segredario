@@ -45,14 +45,14 @@
                  "name":"coin",
                  "properties":
                     {
-                     "type":"coin"
+
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":223.666666666667,
-                 "y":128.333333333333
+                 "x":223.667,
+                 "y":128.333
                 }, 
                 {
                  "gid":58,
@@ -61,14 +61,14 @@
                  "name":"coin",
                  "properties":
                     {
-                     "type":"coin"
+
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":16,
                  "x":240,
-                 "y":127.666666666667
+                 "y":127.667
                 }, 
                 {
                  "gid":58,
@@ -77,14 +77,30 @@
                  "name":"coin",
                  "properties":
                     {
-                     "type":"coin"
+
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":208.333333333333,
-                 "y":127.666666666667
+                 "x":208.333,
+                 "y":127.667
+                }, 
+                {
+                 "gid":698,
+                 "height":24,
+                 "id":6,
+                 "name":"cayo",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":15,
+                 "x":90,
+                 "y":208
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -93,7 +109,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":6,
+ "nextobjectid":7,
  "orientation":"orthogonal",
  "properties":
     {

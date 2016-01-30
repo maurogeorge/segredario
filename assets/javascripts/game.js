@@ -10,6 +10,7 @@ Segredario.Game.prototype = {
   create: function() {
     this.createLevel();
     this.createCoins();
+    this.createCayo();
     this.createPlayer();
     this.createCursors();
   },
@@ -17,6 +18,7 @@ Segredario.Game.prototype = {
   update: function(){
     this.game.physics.arcade.collide(this.player, this.blockedLayer, this.playerHit, null, this);
     this.game.physics.arcade.overlap(this.player, this.coins, this.coinCollect, null, this);
+    this.game.physics.arcade.overlap(this.player, this.cayo, this.cayoAction, null, this);
 
     this.movePlayer();
 
@@ -110,7 +112,8 @@ Segredario.Game.prototype = {
     backgroundLayer.resizeWorld();
 
     var bmg = this.game.add.audio('level', 1, true);
-    bmg.play();
+    // Stop bmg for now
+    // bmg.play();
   },
 
   createCoins: function() {
@@ -123,6 +126,16 @@ Segredario.Game.prototype = {
   coinCollect: function(player, coin) {
     this.coinSound.play();
     coin.kill();
+  },
+
+  createCayo: function() {
+    this.cayo = this.game.add.group();
+    this.cayo.enableBody = true;
+    this.level.createFromObjects('objectsLayer', 698, 'cayo', 0, true, false, this.cayo);
+  },
+
+  cayoAction: function(player, cayo) {
+    cayo.frame = 1;
   },
 
   createCursors: function() {
