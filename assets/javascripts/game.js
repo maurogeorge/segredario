@@ -149,7 +149,8 @@ Segredario.Game.prototype = {
 
   createGoombaPhysics: function(goomba) {
     this.game.physics.enable(goomba, Phaser.Physics.ARCADE);
-    this.game.physics.arcade.moveToXY(goomba, 0, 0, 10);
+    this.game.add.tween(goomba).to({x: '-64'},
+                                   2000, Phaser.Easing.Linear.None, true, 0, -1, true);
 
     goomba.body.immovable = false;
     goomba.body.collideWorldBounds = true;
