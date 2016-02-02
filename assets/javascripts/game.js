@@ -164,7 +164,13 @@ Segredario.Game.prototype = {
   },
 
   goombaHit: function(player, goomba) {
+    var hitY =  goomba.y - player.y;
     goomba.animations.add('kill', [2], 5);
+
+    if(hitY <= goomba.height) {
+      player.frame = 4;
+    }
+
     goomba.animations.play('kill', null, false, true);
   },
 
