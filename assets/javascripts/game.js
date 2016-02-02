@@ -164,6 +164,8 @@ Segredario.Game.prototype = {
   },
 
   goombaHit: function(player, goomba) {
+    goomba.animations.add('kill', [2], 5);
+    goomba.animations.play('kill', null, false, true);
   },
 
   npcs: [
