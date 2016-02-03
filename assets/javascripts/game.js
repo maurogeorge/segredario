@@ -29,7 +29,7 @@ Segredario.Game.prototype = {
     }
 
     this.movePlayer();
-
+    this.holeCollide();
   },
 
   render: function() {
@@ -105,7 +105,11 @@ Segredario.Game.prototype = {
     }
   },
 
+  lastFloorPlayerCollide: {},
+
   playerHit: function(player, blockedLayer) {
+    this.lastFloorPlayerCollide.x = this.player.x;
+    this.lastFloorPlayerCollide.y = this.player.y;
   },
 
   createLevel: function() {
@@ -192,6 +196,25 @@ Segredario.Game.prototype = {
 
   npcAction: function(player, npc) {
     npc.frame = 1;
+  },
+
+  holeCollide: function() {
+    var holeY = 208;
+    if(this.player.y === holeY) {
+      this.game.input.keyboard.stop();
+
+      this.game.add.tween(this.player).to({
+          y: this.lastFloorPlayerCollide.y - this.player.height,
+        },
+        300, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+        this.game.add.tween(this.player).to({
+            x: this.lastFloorPlayerCollide.x - this.player.width,
+          },
+          300, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+          this.game.input.keyboard.start();
+        }.bind(this));
+      }.bind(this));
+    }
   },
 
   createCursors: function() {
