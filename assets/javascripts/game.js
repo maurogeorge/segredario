@@ -105,11 +105,11 @@ Segredario.Game.prototype = {
     }
   },
 
-  lastFloorPlayerCollide: {},
+  lastBlockedLayerPlayerCollide: {},
 
   playerHit: function(player, blockedLayer) {
-    this.lastFloorPlayerCollide.x = this.player.x;
-    this.lastFloorPlayerCollide.y = this.player.y;
+    this.lastBlockedLayerPlayerCollide.x = this.player.x;
+    this.lastBlockedLayerPlayerCollide.y = this.player.y;
   },
 
   createLevel: function() {
@@ -204,11 +204,11 @@ Segredario.Game.prototype = {
       this.game.input.keyboard.stop();
 
       this.game.add.tween(this.player).to({
-          y: this.lastFloorPlayerCollide.y - this.player.height,
+          y: this.lastBlockedLayerPlayerCollide.y - this.player.height,
         },
         300, Phaser.Easing.Linear.None, true).onComplete.add(function() {
         this.game.add.tween(this.player).to({
-            x: this.lastFloorPlayerCollide.x - this.player.width,
+            x: this.lastBlockedLayerPlayerCollide.x - this.player.width,
           },
           300, Phaser.Easing.Linear.None, true).onComplete.add(function() {
           this.game.input.keyboard.start();
