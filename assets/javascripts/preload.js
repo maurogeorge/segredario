@@ -9,6 +9,7 @@ Segredario.Preload.prototype = {
     this.logo();
     this.preloadBar();
     this.loadGameAssets();
+    this.loadFinaleAssets();
   },
 
   create: function() {
@@ -41,5 +42,10 @@ Segredario.Preload.prototype = {
     this.load.spritesheet('matheus', 'assets/sprites/matheus.png', 16, 24);
     this.load.audio('coin', 'assets/audios/sound_effects/coin.wav');
     this.load.audio('level', 'assets/audios/sound_effects/coin.wav');
-  }
+  },
+
+  loadFinaleAssets: function() {
+    this.load.tilemap('finale', 'assets/tilemaps/maps/finale.json',
+                                null, Phaser.Tilemap.TILED_JSON);
+  },
 };
