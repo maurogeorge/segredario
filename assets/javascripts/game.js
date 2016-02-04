@@ -14,6 +14,7 @@ Segredario.Game.prototype = {
     this.createCoins();
     this.createGoombas();
     this.createNPCs();
+    this.createDoor();
     this.createPlayer();
     this.createCursors();
   },
@@ -23,6 +24,7 @@ Segredario.Game.prototype = {
     this.game.physics.arcade.overlap(this.player, this.coins, this.coinCollect, null, this);
     this.game.physics.arcade.collide(this.player, this.goombas, this.goombaHit, null, this);
     this.game.physics.arcade.collide(this.goombas, this.blockedLayer, null, null, this);
+    this.game.physics.arcade.overlap(this.player, this.door, this.doorAction, null, this);
 
     for (let npc of this.npcs) {
       this.game.physics.arcade.overlap(this.player, this[npc['name']], this.npcAction, null, this);
@@ -196,6 +198,15 @@ Segredario.Game.prototype = {
 
   npcAction: function(player, npc) {
     npc.frame = 1;
+  },
+
+  createDoor: function() {
+    this.door = this.game.add.group();
+    this.door.enableBody = true;
+    this.level.createFromObjects('objectsLayer', 674, 'transparent', 674, true, false, this.door);
+  },
+
+  doorAction: function(player, door) {
   },
 
   holeCollide: function() {
