@@ -207,6 +207,7 @@ Segredario.Game.prototype = {
   },
 
   doorAction: function(player, door) {
+    this.state.start('Finale');
   },
 
   holeCollide: function() {
