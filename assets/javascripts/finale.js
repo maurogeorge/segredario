@@ -7,6 +7,8 @@ Segredario.Finale.prototype = {
 
   create: function() {
     this.createLevel();
+    this.createJessica();
+    this.createMauro();
   },
 
   createLevel: function() {
@@ -18,5 +20,13 @@ Segredario.Finale.prototype = {
 
     this.level.setCollisionBetween(1, 900, true, 'blockedLayer');
     backgroundLayer.resizeWorld();
+  },
+
+  createJessica: function() {
+    this.jessica = this.game.add.sprite(10, 176, 'player');
+  },
+
+  createMauro: function() {
+    this.mauro = this.game.add.sprite(180, 184, 'mauro');
   }
 };

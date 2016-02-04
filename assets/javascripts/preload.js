@@ -39,6 +39,7 @@ Segredario.Preload.prototype = {
     this.load.spritesheet('transparent', 'assets/tilemaps/tiles/super_mario_bros.png', 16, 16);
     this.load.spritesheet('goomba', 'assets/sprites/goomba.png', 16, 16);
     this.load.spritesheet('cayo', 'assets/sprites/cayo.png', 15, 24);
+    this.load.spritesheet('mauro', 'assets/sprites/mauro.png', 15, 24);
     this.load.spritesheet('matheus', 'assets/sprites/matheus.png', 16, 24);
     this.load.audio('coin', 'assets/audios/sound_effects/coin.wav');
     this.load.audio('level', 'assets/audios/sound_effects/coin.wav');
