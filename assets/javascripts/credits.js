@@ -26,7 +26,7 @@ Segredario.Credits.prototype = {
     this.game.add.tween(this.text).to({
       y: -(this.game.height + this.text.height),
     },
-    4000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+    10000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
       this.state.start('Boot');
     }.bind(this));
   },
