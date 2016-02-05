@@ -81,7 +81,10 @@ Segredario.Finale.prototype = {
             this.game.add.tween(this.mauro).to({
               x: 260,
             },
-            1000, Phaser.Easing.Linear.None, true)
+            1000, Phaser.Easing.Linear.None, true).onComplete.add(function(){
+              this.state.start('Credits');
+            }.bind(this));
+
 
         }.bind(this));
       }.bind(this);
