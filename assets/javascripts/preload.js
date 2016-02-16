@@ -9,6 +9,7 @@ Segredario.Preload.prototype = {
     this.logo();
     this.preloadBar();
     this.loadGameAssets();
+    this.loadSpeechBubble();
     this.loadFinaleAssets();
   },
 
@@ -43,6 +44,13 @@ Segredario.Preload.prototype = {
     this.load.spritesheet('matheus', 'assets/sprites/matheus.png', 16, 24);
     this.load.audio('coin', 'assets/audios/sound_effects/coin.wav');
     this.load.audio('level', 'assets/audios/sound_effects/coin.wav');
+  },
+
+  loadSpeechBubble: function() {
+    this.game.load.spritesheet('bubble-border', 'vendor/assets/sprites/bubble-border.png', 9, 9);
+    this.game.load.image('bubble-tail', 'vendor/assets/images/bubble-tail.png');
+    this.game.load.bitmapFont('8bitoperator', 'vendor/assets/fonts/bitmaps/8bitoperator.png',
+                                              'vendor/assets/fonts/bitmaps/8bitoperator.xml');
   },
 
   loadFinaleAssets: function() {

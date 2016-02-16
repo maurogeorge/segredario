@@ -17,6 +17,7 @@ Segredario.Game.prototype = {
     this.createDoor();
     this.createPlayer();
     this.createCursors();
+    var bubble = this.game.world.add(new SpeechBubble(this.game, 100, 190, 120, "Boa sorte na sua jornada Jéssica!"));
   },
 
   update: function(){
