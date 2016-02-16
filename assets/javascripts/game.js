@@ -17,7 +17,6 @@ Segredario.Game.prototype = {
     this.createDoor();
     this.createPlayer();
     this.createCursors();
-    var bubble = this.game.world.add(new SpeechBubble(this.game, 100, 190, 120, "Boa sorte na sua jornada Jéssica!"));
   },
 
   update: function(){
@@ -182,9 +181,11 @@ Segredario.Game.prototype = {
   },
 
   npcs: [
-    { gid: 698, name: 'cayo' },
-    { gid: 672, name: 'matheus' }
+    { gid: 698, name: 'cayo', message: "Boa sorte na sua jornada Jéssica!" },
+    { gid: 672, name: 'matheus', message: "Siga em frente, sei que consegue!" }
   ],
+
+  currentSpeechBubble: null,
 
   createNPCs: function() {
     for (let npc of this.npcs) {
@@ -198,7 +199,21 @@ Segredario.Game.prototype = {
   },
 
   npcAction: function(player, npc) {
-    npc.frame = 1;
+    if (this.currentSpeechBubble === null){
+      npc.frame = 1;
+      this.createNPCSppechBubble(npc);
+    }
+  },
+
+  createNPCSppechBubble: function(npc) {
+    var message = this.npcs.find(function(data){ return data.name == npc.name }).message;
+    this.currentSpeechBubble = this.game.world.add(new SpeechBubble(this.game, npc.x + 20, 190, 120, message));
+
+    this.game.time.events.add(Phaser.Timer.SECOND * 2, function() {
+      this.game.world.remove(this.currentSpeechBubble);
+      npc.frame = 0;
+      this.currentSpeechBubble = null;
+    }, this);
   },
 
   createDoor: function() {
