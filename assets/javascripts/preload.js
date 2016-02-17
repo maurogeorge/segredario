@@ -47,7 +47,7 @@ Segredario.Preload.prototype = {
   },
 
   loadSpeechBubble: function() {
-    this.game.load.spritesheet('bubble-border', 'vendor/assets/sprites/bubble-border.png', 9, 9);
+    this.game.load.spritesheet('bubble-border', 'vendor/assets/sprites/bubble-border.png', 6, 6);
     this.game.load.image('bubble-tail', 'vendor/assets/images/bubble-tail.png');
     this.game.load.bitmapFont('8bitoperator', 'vendor/assets/fonts/bitmaps/8bitoperator.png',
                                               'vendor/assets/fonts/bitmaps/8bitoperator.xml');
