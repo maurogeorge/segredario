@@ -48,15 +48,16 @@ Segredario.Finale.prototype = {
 
 
     this.game.add.tween(this.jessica).to({
-      x: 150,
+      x: 100,
     },
     1000, Phaser.Easing.Linear.None, true).onComplete.add(function(){
       this.jessica.animations.stop();
       this.jessica.frame = 0;
+      this.createSpeechBubble(this.mauro, this.mauroText);
     }.bind(this));
 
     this.game.add.tween(this.mauro).to({
-      x: 180,
+      x: 130,
     },
     1000, Phaser.Easing.Linear.None, true).onComplete.add(function(){
       this.mauro.animations.stop();
@@ -67,7 +68,7 @@ Segredario.Finale.prototype = {
         this.jessica.animations.play('right');
 
         this.game.add.tween(this.jessica).to({
-          x: 170,
+          x: 120,
         },
         500, Phaser.Easing.Linear.None, true).onComplete.add(function(){
 
@@ -89,8 +90,30 @@ Segredario.Finale.prototype = {
         }.bind(this));
       }.bind(this);
 
-      this.game.time.events.add(Phaser.Timer.SECOND * 2, goodBye, this);
+      this.game.time.events.add(Phaser.Timer.SECOND * (this.mauroText.length * this.textSpeed), goodBye, this);
 
     }.bind(this));
   },
+
+  mauroText: [
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              'Phasellus finibus metus eget gravida imperdiet. Praesent ac leo velit',
+              'Donec ultrices efficitur lectus tempus posuere. Proin sit amet varius libero, eu rhoncus quam.',
+              'Suspendisse dignissim venenatis ex, nec mollis nunc pellentesque sed.'
+             ],
+  textIndex: 0,
+  textSpeed: 5,
+
+  createSpeechBubble: function(character, text) {
+    var currentSpeechBubble = this.game.world.add(new SpeechBubble(this.game, character.x + 20, 190, 114, text[this.textIndex]));
+    this.game.time.events.add(Phaser.Timer.SECOND * this.textSpeed, function() {
+      this.game.world.remove(currentSpeechBubble);
+      this.textIndex++;
+      if(this.textIndex === text.length) {
+        this.textIndex = 0;
+        return;
+      }
+      this.createSpeechBubble(character, text);
+    }, this);
+  }
 };
