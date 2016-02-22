@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="212" height="15" tilewidth="16" tileheight="16" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="212" height="15" tilewidth="16" tileheight="16" nextobjectid="11">
  <tileset firstgid="1" name="super_mario_bros" tilewidth="16" tileheight="16" tilecount="924" columns="33">
   <image source="../tiles/super_mario_bros.png" width="528" height="448"/>
  </tileset>
@@ -60,5 +60,15 @@
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 </data>
  </layer>
- <objectgroup name="objectsLayer"/>
+ <objectgroup name="objectsLayer">
+  <object id="1" name="goomba" gid="672" x="384" y="208" width="16" height="16"/>
+  <object id="2" name="goomba" gid="672" x="704" y="208" width="16" height="16"/>
+  <object id="3" name="goomba" gid="672" x="848" y="208" width="16" height="16"/>
+  <object id="4" name="goomba" gid="672" x="832" y="208" width="16" height="16"/>
+  <object id="5" name="goomba" gid="672" x="1280" y="80" width="16" height="16"/>
+  <object id="7" name="goomba" gid="672" x="1488" y="208" width="16" height="16"/>
+  <object id="8" name="goomba" gid="672" x="1472" y="208" width="16" height="16"/>
+  <object id="9" name="goomba" gid="672" x="1792" y="208" width="16" height="16"/>
+  <object id="10" name="goomba" gid="672" x="2736" y="208" width="16" height="16"/>
+ </objectgroup>
 </map>
