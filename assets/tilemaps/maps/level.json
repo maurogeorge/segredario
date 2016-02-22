@@ -277,6 +277,38 @@
                  "width":16,
                  "x":1696,
                  "y":128
+                }, 
+                {
+                 "gid":675,
+                 "height":24,
+                 "id":17,
+                 "name":"mario",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":160,
+                 "y":208
+                }, 
+                {
+                 "gid":676,
+                 "height":24,
+                 "id":18,
+                 "name":"yoshi",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":15,
+                 "x":560,
+                 "y":208
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -285,7 +317,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":17,
+ "nextobjectid":19,
  "orientation":"orthogonal",
  "properties":
     {
