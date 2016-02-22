@@ -181,6 +181,102 @@
                  "width":16,
                  "x":2736,
                  "y":208
+                }, 
+                {
+                 "gid":674,
+                 "height":16,
+                 "id":11,
+                 "name":"coin",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":336,
+                 "y":128
+                }, 
+                {
+                 "gid":674,
+                 "height":16,
+                 "id":12,
+                 "name":"coin",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":352,
+                 "y":128
+                }, 
+                {
+                 "gid":674,
+                 "height":16,
+                 "id":13,
+                 "name":"coin",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":368,
+                 "y":128
+                }, 
+                {
+                 "gid":674,
+                 "height":16,
+                 "id":14,
+                 "name":"coin",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1152,
+                 "y":128
+                }, 
+                {
+                 "gid":674,
+                 "height":16,
+                 "id":15,
+                 "name":"coin",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1600,
+                 "y":128
+                }, 
+                {
+                 "gid":674,
+                 "height":16,
+                 "id":16,
+                 "name":"coin",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1696,
+                 "y":128
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -189,7 +285,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":11,
+ "nextobjectid":17,
  "orientation":"orthogonal",
  "properties":
     {

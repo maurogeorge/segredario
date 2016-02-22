@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="212" height="15" tilewidth="16" tileheight="16" nextobjectid="11">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="212" height="15" tilewidth="16" tileheight="16" nextobjectid="17">
  <tileset firstgid="1" name="super_mario_bros" tilewidth="16" tileheight="16" tilecount="924" columns="33">
   <image source="../tiles/super_mario_bros.png" width="528" height="448"/>
  </tileset>
@@ -70,5 +70,11 @@
   <object id="8" name="goomba" gid="672" x="1472" y="208" width="16" height="16"/>
   <object id="9" name="goomba" gid="672" x="1792" y="208" width="16" height="16"/>
   <object id="10" name="goomba" gid="672" x="2736" y="208" width="16" height="16"/>
+  <object id="11" name="coin" gid="674" x="336" y="128" width="16" height="16"/>
+  <object id="12" name="coin" gid="674" x="352" y="128" width="16" height="16"/>
+  <object id="13" name="coin" gid="674" x="368" y="128" width="16" height="16"/>
+  <object id="14" name="coin" gid="674" x="1152" y="128" width="16" height="16"/>
+  <object id="15" name="coin" gid="674" x="1600" y="128" width="16" height="16"/>
+  <object id="16" name="coin" gid="674" x="1696" y="128" width="16" height="16"/>
  </objectgroup>
 </map>
