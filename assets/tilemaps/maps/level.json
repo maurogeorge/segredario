@@ -341,6 +341,38 @@
                  "width":15,
                  "x":1234,
                  "y":208
+                }, 
+                {
+                 "gid":679,
+                 "height":24,
+                 "id":21,
+                 "name":"dk",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1392,
+                 "y":80
+                }, 
+                {
+                 "gid":680,
+                 "height":24,
+                 "id":22,
+                 "name":"diddy",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":15,
+                 "x":1857,
+                 "y":80
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -349,7 +381,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":21,
+ "nextobjectid":23,
  "orientation":"orthogonal",
  "properties":
     {
