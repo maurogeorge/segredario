@@ -373,6 +373,38 @@
                  "width":15,
                  "x":1857,
                  "y":80
+                }, 
+                {
+                 "gid":681,
+                 "height":24,
+                 "id":23,
+                 "name":"fox",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":2016,
+                 "y":208
+                }, 
+                {
+                 "gid":682,
+                 "height":24,
+                 "id":24,
+                 "name":"pikachu",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":15,
+                 "x":2625,
+                 "y":144
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -381,7 +413,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":23,
+ "nextobjectid":25,
  "orientation":"orthogonal",
  "properties":
     {
