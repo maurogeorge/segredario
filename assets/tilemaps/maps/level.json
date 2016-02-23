@@ -309,6 +309,38 @@
                  "width":15,
                  "x":560,
                  "y":208
+                }, 
+                {
+                 "gid":677,
+                 "height":24,
+                 "id":19,
+                 "name":"luigi",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1104,
+                 "y":208
+                }, 
+                {
+                 "gid":678,
+                 "height":24,
+                 "id":20,
+                 "name":"toad",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":15,
+                 "x":1234,
+                 "y":208
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -317,7 +349,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":19,
+ "nextobjectid":21,
  "orientation":"orthogonal",
  "properties":
     {
