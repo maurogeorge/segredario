@@ -133,7 +133,7 @@ Segredario.Game.prototype = {
   createCoins: function() {
     this.coins = this.game.add.group();
     this.coins.enableBody = true;
-    this.level.createFromObjects('objectsLayer', 58, 'coin', 57, true, false, this.coins);
+    this.level.createFromObjects('objectsLayer', 674, 'coin', 57, true, false, this.coins);
     this.coinSound = this.game.add.audio('coin');
   },
 
@@ -145,7 +145,7 @@ Segredario.Game.prototype = {
   createGoombas: function() {
     this.goombas = this.game.add.group();
     this.goombas.enableBody = true;
-    this.level.createFromObjects('objectsLayer', 911, 'goomba', 0, true, false, this.goombas);
+    this.level.createFromObjects('objectsLayer', 672, 'goomba', 0, true, false, this.goombas);
 
     for (let goomba of this.goombas.children) {
       this.createGoombaPhysics(goomba);
@@ -181,8 +181,15 @@ Segredario.Game.prototype = {
   },
 
   npcs: [
-    { gid: 698, name: 'cayo', message: "Boa sorte na sua jornada Jéssica!" },
-    { gid: 672, name: 'matheus', message: "Siga em frente, sei que consegue!" }
+    { gid: 675, name: 'mario', message: "Mensagem do Mario!" },
+    { gid: 676, name: 'yoshi', message: "Mensagem do Yoshi!" },
+    { gid: 677, name: 'luigi', message: "Mensagem do Luigi!" },
+    { gid: 678, name: 'toad', message: "Mensagem do Toad!" },
+    { gid: 679, name: 'dk', message: "Mensagem do DK!" },
+    { gid: 680, name: 'diddy', message: "Mensagem do Diddy!" },
+    { gid: 681, name: 'fox', message: "Mensagem do Fox!" },
+    { gid: 682, name: 'pikachu', message: "Mensagem do Pikachu!" },
+    { gid: 683, name: 'link', message: "Mensagem do Link!" },
   ],
 
   currentSpeechBubble: null,
@@ -219,7 +226,7 @@ Segredario.Game.prototype = {
   createDoor: function() {
     this.door = this.game.add.group();
     this.door.enableBody = true;
-    this.level.createFromObjects('objectsLayer', 674, 'transparent', 674, true, false, this.door);
+    this.level.createFromObjects('objectsLayer', 685, 'transparent', 685, true, false, this.door);
   },
 
   doorAction: function(player, door) {

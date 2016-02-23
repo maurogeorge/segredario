@@ -33,17 +33,28 @@ Segredario.Preload.prototype = {
 
   loadGameAssets: function() {
     this.game.load.spritesheet('player', 'assets/sprites/player.png', 16, 32);
-    this.load.tilemap('level', 'assets/tilemaps/maps/super_mario_bros.json',
+    this.load.tilemap('level', 'assets/tilemaps/maps/level.json',
                                 null, Phaser.Tilemap.TILED_JSON);
     this.load.image('tiles', 'assets/tilemaps/tiles/super_mario_bros.png');
     this.load.spritesheet('coin', 'assets/tilemaps/tiles/super_mario_bros.png', 16, 16);
     this.load.spritesheet('transparent', 'assets/tilemaps/tiles/super_mario_bros.png', 16, 16);
     this.load.spritesheet('goomba', 'assets/sprites/goomba.png', 16, 16);
-    this.load.spritesheet('cayo', 'assets/sprites/cayo.png', 15, 24);
-    this.load.spritesheet('mauro', 'assets/sprites/mauro.png', 15, 24);
-    this.load.spritesheet('matheus', 'assets/sprites/matheus.png', 16, 24);
+    this.loadNPCs();
     this.load.audio('coin', 'assets/audios/sound_effects/coin.wav');
     this.load.audio('level', 'assets/audios/sound_effects/coin.wav');
+    this.load.spritesheet('mauro', 'assets/sprites/mauro.png', 15, 24);
+  },
+
+  loadNPCs: function() {
+    this.load.spritesheet('mario', 'assets/sprites/mario.png', 16, 24);
+    this.load.spritesheet('yoshi', 'assets/sprites/yoshi.png', 15, 24);
+    this.load.spritesheet('luigi', 'assets/sprites/luigi.png', 16, 24);
+    this.load.spritesheet('toad', 'assets/sprites/toad.png', 15, 24);
+    this.load.spritesheet('dk', 'assets/sprites/dk.png', 16, 24);
+    this.load.spritesheet('diddy', 'assets/sprites/diddy.png', 15, 24);
+    this.load.spritesheet('fox', 'assets/sprites/fox.png', 16, 24);
+    this.load.spritesheet('pikachu', 'assets/sprites/pikachu.png', 15, 24);
+    this.load.spritesheet('link', 'assets/sprites/link.png', 16, 24);
   },
 
   loadSpeechBubble: function() {
