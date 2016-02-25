@@ -48,7 +48,7 @@ Segredario.Preload.prototype = {
   loadNPCs: function() {
     this.load.spritesheet('mario', 'assets/sprites/mario.png', 21, 26);
     this.load.spritesheet('yoshi', 'assets/sprites/yoshi.png', 20, 26);
-    this.load.spritesheet('luigi', 'assets/sprites/luigi.png', 16, 24);
+    this.load.spritesheet('luigi', 'assets/sprites/luigi.png', 21, 26);
     this.load.spritesheet('toad', 'assets/sprites/toad.png', 15, 24);
     this.load.spritesheet('dk', 'assets/sprites/dk.png', 16, 24);
     this.load.spritesheet('diddy', 'assets/sprites/diddy.png', 15, 24);
