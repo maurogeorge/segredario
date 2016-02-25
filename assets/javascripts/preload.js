@@ -54,7 +54,7 @@ Segredario.Preload.prototype = {
     this.load.spritesheet('diddy', 'assets/sprites/diddy.png', 30, 26);
     this.load.spritesheet('fox', 'assets/sprites/fox.png', 21, 25);
     this.load.spritesheet('pikachu', 'assets/sprites/pikachu.png', 20, 21);
-    this.load.spritesheet('link', 'assets/sprites/link.png', 16, 24);
+    this.load.spritesheet('link', 'assets/sprites/link.png', 22, 34);
   },
 
   loadSpeechBubble: function() {
