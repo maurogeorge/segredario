@@ -51,7 +51,7 @@ Segredario.Preload.prototype = {
     this.load.spritesheet('luigi', 'assets/sprites/luigi.png', 21, 26);
     this.load.spritesheet('toad', 'assets/sprites/toad.png', 20, 25);
     this.load.spritesheet('dk', 'assets/sprites/dk.png', 30, 27);
-    this.load.spritesheet('diddy', 'assets/sprites/diddy.png', 15, 24);
+    this.load.spritesheet('diddy', 'assets/sprites/diddy.png', 30, 26);
     this.load.spritesheet('fox', 'assets/sprites/fox.png', 16, 24);
     this.load.spritesheet('pikachu', 'assets/sprites/pikachu.png', 15, 24);
     this.load.spritesheet('link', 'assets/sprites/link.png', 16, 24);
