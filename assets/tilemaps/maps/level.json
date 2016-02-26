@@ -280,7 +280,7 @@
                 }, 
                 {
                  "gid":675,
-                 "height":24,
+                 "height":26,
                  "id":17,
                  "name":"mario",
                  "properties":
@@ -290,13 +290,13 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":16,
+                 "width":21,
                  "x":160,
                  "y":208
                 }, 
                 {
                  "gid":676,
-                 "height":24,
+                 "height":26,
                  "id":18,
                  "name":"yoshi",
                  "properties":
@@ -306,13 +306,13 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":15,
+                 "width":20,
                  "x":560,
                  "y":208
                 }, 
                 {
                  "gid":677,
-                 "height":24,
+                 "height":26,
                  "id":19,
                  "name":"luigi",
                  "properties":
@@ -322,13 +322,13 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":16,
+                 "width":21,
                  "x":2016,
                  "y":208
                 }, 
                 {
                  "gid":678,
-                 "height":24,
+                 "height":25,
                  "id":20,
                  "name":"toad",
                  "properties":
@@ -338,13 +338,13 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":15,
+                 "width":20,
                  "x":1234,
                  "y":208
                 }, 
                 {
                  "gid":679,
-                 "height":24,
+                 "height":27,
                  "id":21,
                  "name":"dk",
                  "properties":
@@ -354,13 +354,13 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":16,
+                 "width":30,
                  "x":1392,
                  "y":80
                 }, 
                 {
                  "gid":680,
-                 "height":24,
+                 "height":26,
                  "id":22,
                  "name":"diddy",
                  "properties":
@@ -370,13 +370,13 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":15,
+                 "width":30,
                  "x":1857,
                  "y":80
                 }, 
                 {
                  "gid":681,
-                 "height":24,
+                 "height":25,
                  "id":23,
                  "name":"fox",
                  "properties":
@@ -386,13 +386,13 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":16,
+                 "width":21,
                  "x":1104,
                  "y":208
                 }, 
                 {
                  "gid":682,
-                 "height":24,
+                 "height":21,
                  "id":24,
                  "name":"pikachu",
                  "properties":
@@ -402,13 +402,13 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":15,
+                 "width":20,
                  "x":2625,
                  "y":144
                 }, 
                 {
                  "gid":683,
-                 "height":24,
+                 "height":34,
                  "id":25,
                  "name":"link",
                  "properties":
@@ -418,7 +418,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":16,
+                 "width":22,
                  "x":3088,
                  "y":208
                 }, 

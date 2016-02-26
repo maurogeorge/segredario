@@ -76,15 +76,15 @@
   <object id="14" name="coin" gid="674" x="1152" y="128" width="16" height="16"/>
   <object id="15" name="coin" gid="674" x="1600" y="128" width="16" height="16"/>
   <object id="16" name="coin" gid="674" x="1696" y="128" width="16" height="16"/>
-  <object id="17" name="mario" gid="675" x="160" y="208" width="16" height="24"/>
-  <object id="18" name="yoshi" gid="676" x="560" y="208" width="15" height="24"/>
-  <object id="19" name="luigi" gid="677" x="2016" y="208" width="16" height="24"/>
-  <object id="20" name="toad" gid="678" x="1234" y="208" width="15" height="24"/>
-  <object id="21" name="dk" gid="679" x="1392" y="80" width="16" height="24"/>
-  <object id="22" name="diddy" gid="680" x="1857" y="80" width="15" height="24"/>
-  <object id="23" name="fox" gid="681" x="1104" y="208" width="16" height="24"/>
-  <object id="24" name="pikachu" gid="682" x="2625" y="144" width="15" height="24"/>
-  <object id="25" name="link" gid="683" x="3088" y="208" width="16" height="24"/>
+  <object id="17" name="mario" gid="675" x="160" y="208" width="21" height="26"/>
+  <object id="18" name="yoshi" gid="676" x="560" y="208" width="20" height="26"/>
+  <object id="19" name="luigi" gid="677" x="2016" y="208" width="21" height="26"/>
+  <object id="20" name="toad" gid="678" x="1234" y="208" width="20" height="25"/>
+  <object id="21" name="dk" gid="679" x="1392" y="80" width="30" height="27"/>
+  <object id="22" name="diddy" gid="680" x="1857" y="80" width="30" height="26"/>
+  <object id="23" name="fox" gid="681" x="1104" y="208" width="21" height="25"/>
+  <object id="24" name="pikachu" gid="682" x="2625" y="144" width="20" height="21"/>
+  <object id="25" name="link" gid="683" x="3088" y="208" width="22" height="34"/>
   <object id="26" name="door" gid="685" x="3264" y="208" width="16" height="32"/>
  </objectgroup>
 </map>
