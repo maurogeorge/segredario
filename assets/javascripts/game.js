@@ -214,7 +214,7 @@ Segredario.Game.prototype = {
 
   createNPCSppechBubble: function(npc) {
     var message = this.npcs.find(function(data){ return data.name == npc.name }).message;
-    this.currentSpeechBubble = this.game.world.add(new SpeechBubble(this.game, npc.x + 20, 190, 120, message));
+    this.currentSpeechBubble = this.game.world.add(new SpeechBubble(this.game, npc.x + 20, npc.y + 8, 120, message));
 
     this.game.time.events.add(Phaser.Timer.SECOND * 2, function() {
       this.game.world.remove(this.currentSpeechBubble);
