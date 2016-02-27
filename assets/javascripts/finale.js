@@ -30,7 +30,8 @@ Segredario.Finale.prototype = {
   },
 
   createMauro: function() {
-    this.mauro = this.game.add.sprite(220, 184, 'mauro');
+    this.mauro = this.game.add.sprite(220, 180, 'mauro');
+    this.mauro.frame = 3;
   },
 
   createJessicaAnimations: function(){
@@ -38,8 +39,8 @@ Segredario.Finale.prototype = {
   },
 
   createMauroAnimations: function(){
-    this.mauro.animations.add('left', [0, 1], 10, true);
-    this.mauro.animations.add('right', [0, 1], 10, true);
+    this.mauro.animations.add('left', [2, 1, 0], 10, true);
+    this.mauro.animations.add('right', [5, 6, 7], 10, true);
   },
 
   createAnimations: function() {
@@ -61,7 +62,7 @@ Segredario.Finale.prototype = {
     },
     1000, Phaser.Easing.Linear.None, true).onComplete.add(function(){
       this.mauro.animations.stop();
-      this.mauro.frame = 0;
+      this.mauro.frame = 3;
 
       var goodBye = function() {
 
@@ -105,7 +106,7 @@ Segredario.Finale.prototype = {
   textSpeed: 5,
 
   createSpeechBubble: function(character, text) {
-    var currentSpeechBubble = this.game.world.add(new SpeechBubble(this.game, character.x + 20, 190, 114, text[this.textIndex]));
+    var currentSpeechBubble = this.game.world.add(new SpeechBubble(this.game, character.x + 20, character.y + 8, 114, text[this.textIndex]));
     this.game.time.events.add(Phaser.Timer.SECOND * this.textSpeed, function() {
       this.game.world.remove(currentSpeechBubble);
       this.textIndex++;
