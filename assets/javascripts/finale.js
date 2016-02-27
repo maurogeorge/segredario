@@ -26,7 +26,7 @@ Segredario.Finale.prototype = {
   },
 
   createJessica: function() {
-    this.jessica = this.game.add.sprite(10, 176, 'player');
+    this.jessica = this.game.add.sprite(10, 182, 'player');
   },
 
   createMauro: function() {
@@ -35,7 +35,7 @@ Segredario.Finale.prototype = {
   },
 
   createJessicaAnimations: function(){
-    this.jessica.animations.add('right', [1, 2, 3], 10, true);
+    this.jessica.animations.add('right', [10, 11, 12], 10, true);
   },
 
   createMauroAnimations: function(){
@@ -53,7 +53,7 @@ Segredario.Finale.prototype = {
     },
     1000, Phaser.Easing.Linear.None, true).onComplete.add(function(){
       this.jessica.animations.stop();
-      this.jessica.frame = 0;
+      this.jessica.frame = 9;
       this.createSpeechBubble(this.mauro, this.mauroText);
     }.bind(this));
 

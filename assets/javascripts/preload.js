@@ -32,7 +32,7 @@ Segredario.Preload.prototype = {
   },
 
   loadGameAssets: function() {
-    this.game.load.spritesheet('player', 'assets/sprites/player.png', 16, 32);
+    this.game.load.spritesheet('player', 'assets/sprites/player.png', 28, 25);
     this.load.tilemap('level', 'assets/tilemaps/maps/level.json',
                                 null, Phaser.Tilemap.TILED_JSON);
     this.load.image('tiles', 'assets/tilemaps/tiles/super_mario_bros.png');
