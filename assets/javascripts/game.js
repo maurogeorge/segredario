@@ -64,28 +64,30 @@ Segredario.Game.prototype = {
 
   playerStand: function() {
     this.player.animations.stop();
-    this.player.frame = 9;
+    this.setMovementSprite(this.player, 8, 9);
   },
 
   playerMoveLeft: function() {
+    this.currentPlayerDirection = 'left';
     this.player.body.velocity.x = -80;
     this.player.animations.play('left');
   },
 
   playerMoveRight: function() {
+    this.currentPlayerDirection = 'right';
     this.player.body.velocity.x = 80;
     this.player.animations.play('right');
   },
 
   playerJump: function() {
-    this.player.frame = 14;
+    this.setMovementSprite(this.player, 3, 14);
     if(this.player.body.blocked.down) {
       this.player.body.velocity.y = -200;
     }
   },
 
   playerDuck: function() {
-    this.player.frame = 13;
+    this.setMovementSprite(this.player, 4, 13);
   },
 
   movePlayer: function() {
@@ -102,6 +104,16 @@ Segredario.Game.prototype = {
       this.playerJump();
     } else if (this.cursors.down.isDown) {
       this.playerDuck();
+    }
+  },
+
+  currentPlayerDirection: null,
+
+  setMovementSprite(sprite, left, right){
+    if(this.currentPlayerDirection === 'left'){
+      sprite.frame = left;
+    } else {
+      sprite.frame = right;
     }
   },
 
@@ -172,7 +184,7 @@ Segredario.Game.prototype = {
     goomba.animations.add('kill', [2], 5);
 
     if(hitY <= goomba.height) {
-      player.frame = 17;
+      this.setMovementSprite(player, 0, 17);
     }
 
     goomba.animations.play('kill', null, false, true);
