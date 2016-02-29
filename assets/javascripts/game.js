@@ -91,6 +91,9 @@ Segredario.Game.prototype = {
   },
 
   movePlayer: function() {
+    if(this.capturingKeyboard === false) {
+      return;
+    }
     this.playerResetVelocity();
     if (this.cursors.left.isDown) {
       this.playerMoveLeft();
@@ -243,20 +246,29 @@ Segredario.Game.prototype = {
     this.state.start('Finale');
   },
 
+
   holeCollide: function() {
-    var holeY = 208;
+    var holeY = this.game.height - this.player.height;
     if(this.player.y === holeY) {
-      this.game.input.keyboard.stop();
+      this.stopCaptureKeyboard();
+
+      if(this.currentPlayerDirection === 'left'){
+        var x = this.lastBlockedLayerPlayerCollide.x + this.player.width;
+      } else {
+        var x = this.lastBlockedLayerPlayerCollide.x - this.player.width;
+      }
+
+      this.setMovementSprite(this.player, 1, 16);
 
       this.game.add.tween(this.player).to({
           y: this.lastBlockedLayerPlayerCollide.y - this.player.height,
         },
         300, Phaser.Easing.Linear.None, true).onComplete.add(function() {
         this.game.add.tween(this.player).to({
-            x: this.lastBlockedLayerPlayerCollide.x - this.player.width,
+            x: x,
           },
           300, Phaser.Easing.Linear.None, true).onComplete.add(function() {
-          this.game.input.keyboard.start();
+          this.startCaptureKeyboard();
         }.bind(this));
       }.bind(this));
     }
@@ -265,4 +277,16 @@ Segredario.Game.prototype = {
   createCursors: function() {
     this.cursors = this.game.input.keyboard.createCursorKeys();
   },
+
+  capturingKeyboard: true,
+
+  stopCaptureKeyboard: function() {
+    this.game.input.keyboard.stop();
+    this.capturingKeyboard = false;
+  },
+
+  startCaptureKeyboard: function() {
+    this.game.input.keyboard.start();
+    this.capturingKeyboard = true;
+  }
 };
