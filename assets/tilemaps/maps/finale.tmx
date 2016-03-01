@@ -43,13 +43,13 @@
  </layer>
  <objectgroup name="objectsLayer">
   <object id="1" name="mario" gid="672" x="64" y="142" width="21" height="26"/>
-  <object id="2" name="yoshi" gid="673" x="104" y="143" width="26" height="26"/>
-  <object id="3" name="luigi" gid="674" x="32" y="95" width="21" height="26"/>
-  <object id="4" name="toad" gid="675" x="73" y="95" width="20" height="25"/>
-  <object id="5" name="dk" gid="676" x="64" y="47" width="30" height="27"/>
-  <object id="6" name="diddy" gid="677" x="112" y="47" width="30" height="26"/>
-  <object id="7" name="fox" gid="678" x="151" y="47" width="21" height="25"/>
-  <object id="8" name="pikachu" gid="679" x="178" y="47" width="20" height="21"/>
-  <object id="9" name="link" gid="680" x="214" y="47" width="22" height="34"/>
+  <object id="2" name="yoshi" gid="673" x="74" y="95" width="26" height="26"/>
+  <object id="3" name="luigi" gid="674" x="72" y="47" width="21" height="26"/>
+  <object id="4" name="toad" gid="675" x="216" y="47" width="20" height="25"/>
+  <object id="5" name="dk" gid="676" x="32" y="95" width="30" height="27"/>
+  <object id="6" name="diddy" gid="677" x="104" y="47" width="30" height="26"/>
+  <object id="7" name="fox" gid="678" x="146" y="47" width="21" height="25"/>
+  <object id="8" name="pikachu" gid="679" x="182" y="47" width="20" height="21"/>
+  <object id="9" name="link" gid="680" x="96" y="142" width="22" height="34"/>
  </objectgroup>
 </map>
