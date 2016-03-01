@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="15" tilewidth="16" tileheight="16" nextobjectid="7">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="15" tilewidth="16" tileheight="16" nextobjectid="10">
  <tileset firstgid="1" name="super_mario_bros" tilewidth="16" tileheight="16" tilecount="924" columns="33">
   <image source="../tiles/super_mario_bros.png" width="528" height="448"/>
  </tileset>
@@ -27,7 +27,7 @@
 168,168,168,168,168,168,168,168,168,168,168,168,168,168,168,168,
 168,168,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 168,168,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-168,168,0,0,168,168,168,168,168,0,0,0,0,0,0,0,
+168,168,0,0,168,168,168,168,168,168,168,168,168,168,168,168,
 168,168,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 168,168,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 168,168,168,168,168,168,0,0,0,0,0,0,0,0,0,0,
@@ -48,5 +48,8 @@
   <object id="4" name="toad" gid="675" x="73" y="95" width="20" height="25"/>
   <object id="5" name="dk" gid="676" x="64" y="47" width="30" height="27"/>
   <object id="6" name="diddy" gid="677" x="112" y="47" width="30" height="26"/>
+  <object id="7" name="fox" gid="678" x="151" y="47" width="21" height="25"/>
+  <object id="8" name="pikachu" gid="679" x="178" y="47" width="20" height="21"/>
+  <object id="9" name="link" gid="680" x="214" y="47" width="22" height="34"/>
  </objectgroup>
 </map>
