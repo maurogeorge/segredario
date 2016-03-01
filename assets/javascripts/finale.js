@@ -12,6 +12,7 @@ Segredario.Finale.prototype = {
     this.createMauro();
     this.createMauroAnimations();
     this.createAnimations();
+    this.createNPCs();
   },
 
   createLevel: function() {
@@ -74,6 +75,7 @@ Segredario.Finale.prototype = {
         500, Phaser.Easing.Linear.None, true).onComplete.add(function(){
 
           this.mauro.animations.play('right');
+          this.npcsAction();
 
           this.game.add.tween(this.jessica).to({
             x: 260,
@@ -116,5 +118,35 @@ Segredario.Finale.prototype = {
       }
       this.createSpeechBubble(character, text);
     }, this);
+  },
+
+  npcs: [
+    { gid: 672, name: 'mario' },
+    { gid: 673, name: 'yoshi' },
+    { gid: 674, name: 'luigi' },
+    { gid: 675, name: 'toad' },
+    { gid: 676, name: 'dk' },
+    { gid: 677, name: 'diddy' },
+    { gid: 678, name: 'fox' },
+    { gid: 679, name: 'pikachu' },
+    { gid: 680, name: 'link' },
+  ],
+
+  createNPCs: function() {
+    for (let npc of this.npcs) {
+      var name = npc['name']
+      var gid = npc['gid']
+
+      this[name] = this.game.add.group();
+      this[name].enableBody = true;
+      this.level.createFromObjects('objectsLayer', gid, name, 0, true, false, this[name]);
+    }
+  },
+
+  npcsAction: function() {
+    for (let npc of this.npcs) {
+      var name = npc['name'];
+      this[name].children[0].frame = 1;
+    }
   }
 };
