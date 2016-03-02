@@ -11,8 +11,8 @@ Segredario.Finale.prototype = {
     this.createJessicaAnimations();
     this.createMauro();
     this.createMauroAnimations();
-    this.createAnimations();
     this.createNPCs();
+    this.createScenes();
   },
 
   createLevel: function() {
@@ -37,65 +37,12 @@ Segredario.Finale.prototype = {
 
   createJessicaAnimations: function(){
     this.jessica.animations.add('right', [10, 11, 12], 10, true);
+    this.jessica.frame = 9;
   },
 
   createMauroAnimations: function(){
     this.mauro.animations.add('left', [2, 1, 0], 10, true);
     this.mauro.animations.add('right', [5, 6, 7], 10, true);
-  },
-
-  createAnimations: function() {
-    this.jessica.animations.play('right');
-    this.mauro.animations.play('left');
-
-
-    this.game.add.tween(this.jessica).to({
-      x: 100,
-    },
-    1000, Phaser.Easing.Linear.None, true).onComplete.add(function(){
-      this.jessica.animations.stop();
-      this.jessica.frame = 9;
-      this.createSpeechBubble(this.mauro, this.mauroText);
-    }.bind(this));
-
-    this.game.add.tween(this.mauro).to({
-      x: 130,
-    },
-    1000, Phaser.Easing.Linear.None, true).onComplete.add(function(){
-      this.mauro.animations.stop();
-      this.mauro.frame = 3;
-
-      var goodBye = function() {
-
-        this.jessica.animations.play('right');
-
-        this.game.add.tween(this.jessica).to({
-          x: 120,
-        },
-        500, Phaser.Easing.Linear.None, true).onComplete.add(function(){
-
-          this.mauro.animations.play('right');
-          this.npcsAction();
-
-          this.game.add.tween(this.jessica).to({
-            x: 260,
-          },
-          1000, Phaser.Easing.Linear.None, true)
-
-            this.game.add.tween(this.mauro).to({
-              x: 260,
-            },
-            1000, Phaser.Easing.Linear.None, true).onComplete.add(function(){
-              this.state.start('Credits');
-            }.bind(this));
-
-
-        }.bind(this));
-      }.bind(this);
-
-      this.game.time.events.add(Phaser.Timer.SECOND * (this.mauroText.length * this.textSpeed), goodBye, this);
-
-    }.bind(this));
   },
 
   mauroText: [
@@ -148,5 +95,87 @@ Segredario.Finale.prototype = {
       var name = npc['name'];
       this[name].children[0].frame = 1;
     }
+  },
+
+  sceneOne: function() {
+  },
+
+  sceneTwo: function() {
+    this.jessica.animations.play('right');
+    this.mauro.animations.play('left');
+
+    this.game.add.tween(this.jessica).to({
+      x: 100,
+    },
+    1000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+      this.jessica.animations.stop();
+      this.jessica.frame = 9;
+    }.bind(this));
+
+    this.game.add.tween(this.mauro).to({
+      x: 130,
+    },
+    1000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+      this.mauro.animations.stop();
+      this.mauro.frame = 3;
+    }.bind(this));
+  },
+
+  sceneThree: function() {
+    this.createSpeechBubble(this.mauro, this.mauroText);
+  },
+
+  sceneFour: function() {
+    var ring = this.game.add.sprite(146, 166, 'ring');
+    this.game.add.tween(ring).to({
+      x: 106,
+    },
+    2000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+      this.game.add.tween(ring).to({
+        y: 175,
+      },
+      1000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+        ring.kill();
+      });
+    }.bind(this));
+  },
+
+  sceneFive: function() {
+    this.npcsAction();
+    this.jessica.animations.play('right', 5);
+    this.mauro.animations.play('left', 5);
+
+    this.game.add.tween(this.jessica).to({
+      x: 114,
+    },
+    1000, Phaser.Easing.Linear.None, true);
+
+    this.game.add.tween(this.mauro).to({
+      x: 124,
+    },
+    1000, Phaser.Easing.Linear.None, true);
+  },
+
+  sceneIndex: 0,
+  totalOfScenes: 5,
+
+  getScenes: function(index) {
+    var scenes = [[this.sceneOne, 3], [this.sceneTwo, 2],
+                      [this.sceneThree, (this.mauroText.length * this.textSpeed)],
+                      [this.sceneFour, 4], [this.sceneFive, 5]]
+    return scenes[index];
+  },
+
+  createScenes: function() {
+    var currentScene = this.getScenes(this.sceneIndex);
+    currentScene[0].call(this);
+    // console.log(currentScene[0], currentScene[1]);
+    this.game.time.events.add(Phaser.Timer.SECOND * currentScene[1], function() {
+      this.sceneIndex++;
+      if(this.sceneIndex === this.totalOfScenes) {
+        return;
+      }
+      this.createScenes();
+    }, this);
   }
 };

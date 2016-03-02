@@ -43,6 +43,8 @@ Segredario.Preload.prototype = {
     this.load.audio('coin', 'assets/audios/sound_effects/coin.wav');
     this.load.audio('level', 'assets/audios/sound_effects/coin.wav');
     this.load.spritesheet('mauro', 'assets/sprites/mauro.png', 25, 27);
+    this.load.spritesheet('ring', 'assets/sprites/ring.png', 7, 9);
+    this.load.spritesheet('heart', 'assets/sprites/heart.png', 7, 8);
   },
 
   loadNPCs: function() {
