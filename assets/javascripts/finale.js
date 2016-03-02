@@ -13,6 +13,7 @@ Segredario.Finale.prototype = {
     this.createMauroAnimations();
     this.createNPCs();
     this.createScenes();
+
   },
 
   createLevel: function() {
@@ -136,24 +137,36 @@ Segredario.Finale.prototype = {
       },
       1000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
         ring.kill();
-      });
+        this.npcsAction();
+      }.bind(this));
     }.bind(this));
   },
 
   sceneFive: function() {
-    this.npcsAction();
     this.jessica.animations.play('right', 5);
     this.mauro.animations.play('left', 5);
 
     this.game.add.tween(this.jessica).to({
       x: 114,
     },
-    1000, Phaser.Easing.Linear.None, true);
+    1000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+      this.jessica.animations.stop();
+      this.jessica.frame = 9;
+    }.bind(this));
 
     this.game.add.tween(this.mauro).to({
       x: 124,
     },
-    1000, Phaser.Easing.Linear.None, true);
+    1000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+      this.mauro.animations.stop();
+      this.mauro.frame = 3;
+
+      var heart = this.game.add.sprite(126, 190, 'heart');
+      this.game.add.tween(heart).to( { x: -100, y: -100 }, 2000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+        this.state.start('Credits');
+      }.bind(this));
+      this.game.add.tween(heart.scale).to( { x: 256, y: 240 }, 8000, Phaser.Easing.Linear.None, true);
+    }.bind(this));
   },
 
   sceneIndex: 0,
@@ -162,7 +175,7 @@ Segredario.Finale.prototype = {
   getScenes: function(index) {
     var scenes = [[this.sceneOne, 3], [this.sceneTwo, 2],
                       [this.sceneThree, (this.mauroText.length * this.textSpeed)],
-                      [this.sceneFour, 4], [this.sceneFive, 5]]
+                      [this.sceneFour, 6], [this.sceneFive, 2]]
     return scenes[index];
   },
 
