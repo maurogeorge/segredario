@@ -127,17 +127,20 @@ Segredario.Finale.prototype = {
   },
 
   sceneFour: function() {
-    var ring = this.game.add.sprite(146, 166, 'ring');
-    this.game.add.tween(ring).to({
-      x: 106,
-    },
-    2000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+    var ring = this.game.add.sprite(142, 166, 'ring');
+
+    this.game.time.events.add(Phaser.Timer.SECOND * 1, function() {
       this.game.add.tween(ring).to({
-        y: 175,
+        x: 106,
       },
-      1000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
-        ring.kill();
-        this.npcsAction();
+      2000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+        this.game.add.tween(ring).to({
+          y: 175,
+        },
+        1000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+          ring.kill();
+          this.npcsAction();
+        }.bind(this));
       }.bind(this));
     }.bind(this));
   },
@@ -175,14 +178,13 @@ Segredario.Finale.prototype = {
   getScenes: function(index) {
     var scenes = [[this.sceneOne, 3], [this.sceneTwo, 2],
                       [this.sceneThree, (this.mauroText.length * this.textSpeed)],
-                      [this.sceneFour, 6], [this.sceneFive, 2]]
+                      [this.sceneFour, 7], [this.sceneFive, 2]]
     return scenes[index];
   },
 
   createScenes: function() {
     var currentScene = this.getScenes(this.sceneIndex);
     currentScene[0].call(this);
-    // console.log(currentScene[0], currentScene[1]);
     this.game.time.events.add(Phaser.Timer.SECOND * currentScene[1], function() {
       this.sceneIndex++;
       if(this.sceneIndex === this.totalOfScenes) {
