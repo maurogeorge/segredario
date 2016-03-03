@@ -13,7 +13,6 @@ Segredario.Finale.prototype = {
     this.createMauroAnimations();
     this.createNPCs();
     this.createScenes();
-
   },
 
   createLevel: function() {
@@ -165,10 +164,10 @@ Segredario.Finale.prototype = {
       this.mauro.frame = 3;
 
       var heart = this.game.add.sprite(126, 190, 'heart');
-      this.game.add.tween(heart).to( { x: -100, y: -100 }, 2000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+      this.game.add.tween(heart).to( { x: -100, y: -100 }, 3000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
         this.state.start('Credits');
       }.bind(this));
-      this.game.add.tween(heart.scale).to( { x: 256, y: 240 }, 8000, Phaser.Easing.Linear.None, true);
+      this.game.add.tween(heart.scale).to( { x: 256, y: 240 }, 12000, Phaser.Easing.Linear.None, true);
     }.bind(this));
   },
 
