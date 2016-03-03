@@ -46,13 +46,16 @@ Segredario.Finale.prototype = {
   },
 
   mauroText: [
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-              'Phasellus finibus metus eget gravida imperdiet. Praesent ac leo velit',
-              'Donec ultrices efficitur lectus tempus posuere. Proin sit amet varius libero, eu rhoncus quam.',
-              'Suspendisse dignissim venenatis ex, nec mollis nunc pellentesque sed.'
+              'Que bom que passou dessa fase.',
+              'Você sabe que é muito importante para mim, e sei que sou para você também.',
+              'Não gostaria de te ver perdendo, de qualquer modo estou aqui e sempre estarei para te apoiar.',
+              'Agora que passou dessa fase, se inicia mais uma em nossas vidas, uma bem importante.',
+              'Onde iremos compartilhar ainda mais nossas vidas em nosso co-op que começou a muito tempo.',
+              'E então quer iniciar a nova fase?',
+              'Jéssica Monteiro quer se casar comigo?'
              ],
   textIndex: 0,
-  textSpeed: 5,
+  textSpeed: 10,
 
   createSpeechBubble: function(character, text) {
     var currentSpeechBubble = this.game.world.add(new SpeechBubble(this.game, character.x + 20, character.y + 8, 114, text[this.textIndex]));
