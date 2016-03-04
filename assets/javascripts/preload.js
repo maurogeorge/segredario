@@ -27,7 +27,7 @@ Segredario.Preload.prototype = {
     var preloadBar = this.add.sprite(this.game.world.centerX,
                                      this.game.world.centerY, 'preload-bar');
     preloadBar.anchor.setTo(0.5, -8);
-    preloadBar.scale.setTo(2, 1);
+    preloadBar.scale.setTo(3, 1);
     this.load.setPreloadSprite(preloadBar);
   },
 
