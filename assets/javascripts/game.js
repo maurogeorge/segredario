@@ -200,9 +200,9 @@ Segredario.Game.prototype = {
     { gid: 678, name: 'toad', message: 'Feliz em te ver por aqui.' },
     { gid: 679, name: 'dk', message: 'Siga para o castelo.' },
     { gid: 680, name: 'diddy', message: 'Onde estão as bananas?' },
-    { gid: 681, name: 'fox', message: 'Role feito um barril Jéssica!' },
+    { gid: 681, name: 'fox', message: 'Role feito um barril!' },
     { gid: 682, name: 'pikachu', message: 'Pika, pika, pikachu!' },
-    { gid: 683, name: 'link', message: 'É perigoso seguir sozinha. Sei que não está sozinha!' },
+    { gid: 683, name: 'link', message: 'É perigoso ir sozinha. Entre no castelo!' },
   ],
 
   currentSpeechBubble: null,
