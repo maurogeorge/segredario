@@ -63,7 +63,7 @@ Segredario.Credits.prototype = {
       y: -(this.game.height + this.text.height),
     },
     40000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
-      this.state.start('Boot');
+      this.endingMessage();
     }.bind(this));
   },
 
@@ -73,7 +73,7 @@ Segredario.Credits.prototype = {
   createTitle: function(content){
     this.titleCounter += 1;
 
-    var style = { font: "16px Arial", fill: "#868AEE", align: "center" };
+    var style = { font: "15px Verdana", fill: "#868AEE", align: "center" };
 
     var text = this.game.add.text(this.game.world.centerX, this.game.world.centerY, content, style);
     text.x = this.game.world.centerX - (text.width / 2);
@@ -85,12 +85,26 @@ Segredario.Credits.prototype = {
   createParagraph: function(content){
     this.paragraphCounter += 1;
 
-    var style = { font: "14px Arial", fill: "#ffffff", align: "center" };
+    var style = { font: "13px Verdana", fill: "#ffffff", align: "center" };
 
     var text = this.game.add.text(this.game.world.centerX, this.game.world.centerY, content, style);
     text.x = this.game.world.centerX - (text.width / 2);
     text.y = this.game.world.centerY + ((this.titleCounter * 32) + (this.paragraphCounter * 28));
 
     this.text.add(text);
+  },
+
+  endingMessage: function() {
+    var style = { font: "13px Verdana", fill: "#ffffff", align: "center" };
+    var content = 'A nova fase apenas começou... ';
+
+    var text = this.game.add.text(this.game.world.centerX, this.game.world.centerY, content, style);
+    text.x = this.game.world.centerX - (text.width / 2);
+    text.y = this.game.height;
+
+    this.game.add.tween(text).to({
+      y: +(this.game.height / 2),
+    },
+    2000, Phaser.Easing.Linear.None, true);
   }
 };
