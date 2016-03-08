@@ -8,12 +8,48 @@ Segredario.Credits.prototype = {
   create: function() {
     this.createText();
 
-    this.createTitle("- Segredário -");
-    this.createTitle("Producer");
-    this.createParagraph("Mauro George");
-    this.createTitle("Brodagem");
-    this.createParagraph("Yogodoshi");
-    this.createParagraph("Matheus Brás");
+    this.createTitle('- Segredário -');
+
+    this.createParagraph('Mauro George');
+    this.createTitle('Director');
+    this.createParagraph('Mauro George');
+
+    this.createTitle('Special Thanks');
+    this.createParagraph('Maria Nilza');
+    this.createParagraph('José Mauro');
+    this.createParagraph('Gilton Monteiro');
+    this.createParagraph('Heloisa Pereira');
+    this.createParagraph('Júlio Monteiro');
+    this.createParagraph('Matheus Brás');
+    this.createParagraph('Cayo Medeiros(Yogodoshi)');
+    this.createParagraph('Nintendo');
+
+    this.createTitle('HTML5 Game Framework');
+    this.createParagraph('Phaser');
+    this.createParagraph('Copyright © 2016 Photon Storm Ltd.');
+    this.createTitle('Level Editor');
+    this.createParagraph('Tiled Map Editor');
+    this.createParagraph('Copyright © 2016 Thorbjørn Lindeijer');
+    this.createTitle('Pixel Editor');
+    this.createParagraph('Pixel.Tools');
+    this.createParagraph('Copyright © 2016 Alex Hanson-White');
+    this.createTitle('Sprites');
+    this.createParagraph('The Spriters Resource');
+    this.createParagraph('Nintendo');
+    this.createParagraph('Copyright © 2016 Nintendo Co., Ltd.');
+    this.createTitle('Sounds');
+    this.createParagraph('The Sounds Resource');
+    this.createParagraph('Nintendo');
+    this.createParagraph('Copyright © 2016 Nintendo Co., Ltd.');
+    this.createTitle('Fontes');
+    this.createParagraph('Super Mario Bros Alphabet');
+    this.createParagraph('Copyright © 2016 Aryel Filipe');
+
+    this.createTitle('Thank You For Playing!');
+
+    this.createTitle('Produced By');
+    this.createParagraph('Mauro George');
+
 
     this.createTextAnimations();
   },
@@ -26,7 +62,7 @@ Segredario.Credits.prototype = {
     this.game.add.tween(this.text).to({
       y: -(this.game.height + this.text.height),
     },
-    10000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+    40000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
       this.state.start('Boot');
     }.bind(this));
   },
