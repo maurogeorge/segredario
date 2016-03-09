@@ -17,6 +17,7 @@ Segredario.Game.prototype = {
     this.createDoor();
     this.createPlayer();
     this.createCursors();
+    this.createSounds();
   },
 
   update: function(){
@@ -83,6 +84,7 @@ Segredario.Game.prototype = {
     this.setMovementSprite(this.player, 3, 14);
     if(this.player.body.blocked.down) {
       this.player.body.velocity.y = -200;
+      this.jumpSound.play();
     }
   },
 
@@ -147,7 +149,6 @@ Segredario.Game.prototype = {
     this.coins = this.game.add.group();
     this.coins.enableBody = true;
     this.level.createFromObjects('objectsLayer', 674, 'coin', 57, true, false, this.coins);
-    this.coinSound = this.game.add.audio('coin');
   },
 
   coinCollect: function(player, coin) {
@@ -188,6 +189,9 @@ Segredario.Game.prototype = {
 
     if(hitY <= goomba.height) {
       this.setMovementSprite(player, 0, 17);
+      this.fireBallSound.play('', 0, 1, false, false);
+    } else {
+      this.squishSound.play('', 0, 1, false, false);
     }
 
     goomba.animations.play('kill', null, false, true);
@@ -252,6 +256,8 @@ Segredario.Game.prototype = {
     if(this.player.y === holeY) {
       this.stopCaptureKeyboard();
 
+      this.jumpSound.play();
+
       if(this.currentPlayerDirection === 'left'){
         var x = this.lastBlockedLayerPlayerCollide.x + this.player.width;
       } else {
@@ -288,5 +294,12 @@ Segredario.Game.prototype = {
   startCaptureKeyboard: function() {
     this.game.input.keyboard.start();
     this.capturingKeyboard = true;
+  },
+
+  createSounds: function() {
+    this.coinSound = this.game.add.audio('coin');
+    this.jumpSound = this.game.add.audio('jump');
+    this.squishSound = this.game.add.audio('squish');
+    this.fireBallSound = this.game.add.audio('fire-ball');
   }
 };

@@ -40,8 +40,8 @@ Segredario.Preload.prototype = {
     this.load.spritesheet('transparent', 'assets/tilemaps/tiles/super_mario_bros.png', 16, 16);
     this.load.spritesheet('goomba', 'assets/sprites/goomba.png', 16, 16);
     this.loadNPCs();
-    this.load.audio('coin', 'assets/audios/sound_effects/coin.wav');
-    this.load.audio('level', 'assets/audios/sound_effects/coin.wav');
+    this.loadSounds();
+
     this.load.spritesheet('mauro', 'assets/sprites/mauro.png', 25, 27);
     this.load.spritesheet('ring', 'assets/sprites/ring.png', 7, 9);
     this.load.spritesheet('heart', 'assets/sprites/heart.png', 7, 8);
@@ -70,4 +70,13 @@ Segredario.Preload.prototype = {
     this.load.tilemap('finale', 'assets/tilemaps/maps/finale.json',
                                 null, Phaser.Tilemap.TILED_JSON);
   },
+
+  loadSounds: function() {
+    this.load.audio('coin', 'assets/audios/sound_effects/coin.wav');
+    this.load.audio('jump', 'assets/audios/sound_effects/jump.wav');
+    this.load.audio('squish', 'assets/audios/sound_effects/squish.wav');
+    this.load.audio('fire-ball', 'assets/audios/sound_effects/fire-ball.wav');
+
+    this.load.audio('level', 'assets/audios/sound_effects/coin.wav');
+  }
 };
