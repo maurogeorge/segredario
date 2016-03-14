@@ -40,6 +40,7 @@ Segredario.Credits.prototype = {
     this.createParagraph('Copyright © 2016 Nintendo Co., Ltd.');
     this.createTitle('Sounds');
     this.createParagraph('The Sounds Resource');
+    this.createParagraph('Mario Mayhem');
     this.createParagraph('Nintendo');
     this.createParagraph('Copyright © 2016 Nintendo Co., Ltd.');
     this.createTitle('Fontes');
