@@ -7,6 +7,7 @@ Segredario.Credits.prototype = {
 
   create: function() {
     this.createText();
+    this.createBMG();
 
     this.createTitle('- Segredário -');
 
@@ -56,6 +57,11 @@ Segredario.Credits.prototype = {
 
   createText: function() {
     this.text = this.game.add.group();
+  },
+
+  createBMG: function() {
+    this.bmg = this.game.add.audio('credits', 1, true);
+    this.bmg.play();
   },
 
   createTextAnimations: function() {

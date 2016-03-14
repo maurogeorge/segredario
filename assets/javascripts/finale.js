@@ -24,6 +24,13 @@ Segredario.Finale.prototype = {
 
     this.level.setCollisionBetween(1, 900, true, 'blockedLayer');
     backgroundLayer.resizeWorld();
+
+    this.createBMG();
+  },
+
+  createBMG: function() {
+    this.bmg = this.game.add.audio('finale', 1, true);
+    this.bmg.play();
   },
 
   createJessica: function() {
@@ -168,6 +175,7 @@ Segredario.Finale.prototype = {
 
       var heart = this.game.add.sprite(126, 190, 'heart');
       this.game.add.tween(heart).to( { x: -100, y: -100 }, 3000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+        this.bmg.stop();
         this.state.start('Credits');
       }.bind(this));
       this.game.add.tween(heart.scale).to( { x: 256, y: 240 }, 12000, Phaser.Easing.Linear.None, true);
