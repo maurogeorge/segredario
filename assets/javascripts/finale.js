@@ -147,7 +147,11 @@ Segredario.Finale.prototype = {
           y: 175,
         },
         1000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
+          var powerupSound = this.game.add.audio('powerup');
+          powerupSound.play();
+
           ring.kill();
+
           this.npcsAction();
         }.bind(this));
       }.bind(this));
@@ -172,6 +176,9 @@ Segredario.Finale.prototype = {
     1000, Phaser.Easing.Linear.None, true).onComplete.add(function() {
       this.mauro.animations.stop();
       this.mauro.frame = 3;
+
+      var flagpoleSound = this.game.add.audio('flagpole');
+      flagpoleSound.play();
 
       var heart = this.game.add.sprite(126, 190, 'heart');
       this.game.add.tween(heart).to( { x: -100, y: -100 }, 3000, Phaser.Easing.Linear.None, true).onComplete.add(function() {

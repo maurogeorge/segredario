@@ -76,6 +76,8 @@ Segredario.Preload.prototype = {
     this.load.audio('jump', 'assets/audios/sound_effects/jump.wav');
     this.load.audio('squish', 'assets/audios/sound_effects/squish.wav');
     this.load.audio('fire-ball', 'assets/audios/sound_effects/fire-ball.wav');
+    this.load.audio('powerup', 'assets/audios/sound_effects/powerup.wav');
+    this.load.audio('flagpole', 'assets/audios/sound_effects/flagpole.wav');
 
     this.load.audio('level', 'assets/audios/bmgs/level.mp3');
     this.load.audio('level-complete', 'assets/audios/bmgs/level-complete.mp3');
