@@ -14,7 +14,9 @@ Segredario.Preload.prototype = {
   },
 
   create: function() {
-    this.state.start('Game');
+    this.game.time.events.add(Phaser.Timer.SECOND * 2, function() {
+      this.state.start('Game');
+    }.bind(this));
   },
 
   logo: function() {
