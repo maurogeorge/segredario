@@ -145,6 +145,8 @@ Segredario.Game.prototype = {
 
   createBMG: function() {
     this.bmg = this.game.add.audio('level', 1, true);
+    this.bmgFinale = this.game.add.audio('level-complete', 1, true);
+
     this.bmg.play();
   },
 
@@ -251,7 +253,13 @@ Segredario.Game.prototype = {
 
   doorAction: function(player, door) {
     this.bmg.stop();
-    this.state.start('Finale');
+    this.player.kill();
+
+    this.bmgFinale.play('', 0, 1, false, false);
+
+    this.game.time.events.add(Phaser.Timer.SECOND * 7, function() {
+      this.state.start('Finale');
+    }.bind(this));
   },
 
 
