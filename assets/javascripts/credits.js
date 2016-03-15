@@ -61,7 +61,7 @@ Segredario.Credits.prototype = {
   },
 
   createBMG: function() {
-    this.bmg = this.game.add.audio('credits', 1, true);
+    this.bmg = this.game.add.audio('credits');
     this.bmg.play();
   },
 
