@@ -72,13 +72,19 @@ Segredario.Game.prototype = {
   playerMoveLeft: function() {
     this.currentPlayerDirection = 'left';
     this.player.body.velocity.x = -80;
-    this.player.animations.play('left');
+
+    if (this.player.body.onFloor()) {
+      this.player.animations.play('left');
+    }
   },
 
   playerMoveRight: function() {
     this.currentPlayerDirection = 'right';
     this.player.body.velocity.x = 80;
-    this.player.animations.play('right');
+
+    if (this.player.body.onFloor()) {
+      this.player.animations.play('right');
+    }
   },
 
   playerJump: function() {
