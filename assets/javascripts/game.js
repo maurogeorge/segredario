@@ -40,7 +40,7 @@ Segredario.Game.prototype = {
   },
 
   createPlayer: function() {
-    this.player = this.game.add.sprite(10, 176, 'player');
+    this.player = this.game.add.sprite(10, 183, 'player');
     this.game.physics.arcade.enable(this.player);
     this.game.camera.follow(this.player);
     this.player.frame = 9;
