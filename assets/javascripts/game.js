@@ -96,6 +96,10 @@ Segredario.Game.prototype = {
     }
   },
 
+  playerFall: function() {
+    this.setMovementSprite(this.player, 2, 15);
+  },
+
   playerDuck: function() {
     this.setMovementSprite(this.player, 4, 13);
   },
@@ -117,6 +121,8 @@ Segredario.Game.prototype = {
       this.playerJump();
     } else if (this.cursors.down.isDown) {
       this.playerDuck();
+    } else if (!this.player.body.onFloor()) {
+      this.playerFall();
     }
   },
 
