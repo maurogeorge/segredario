@@ -89,6 +89,8 @@ Segredario.Game.prototype = {
 
   playerJump: function() {
     this.setMovementSprite(this.player, 3, 14);
+    this.player.animations.stop('right');
+    this.player.animations.stop('left');
     if(this.player.body.blocked.down) {
       this.player.body.velocity.y = -200;
       this.jumpSound.play();
