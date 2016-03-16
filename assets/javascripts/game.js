@@ -43,6 +43,7 @@ Segredario.Game.prototype = {
     this.player = this.game.add.sprite(10, 176, 'player');
     this.game.physics.arcade.enable(this.player);
     this.game.camera.follow(this.player);
+    this.player.frame = 9;
 
     this.createPlayerPhysics();
     this.createPlayerAnimations();
@@ -101,7 +102,7 @@ Segredario.Game.prototype = {
       this.playerMoveLeft();
     } else if (this.cursors.right.isDown) {
       this.playerMoveRight();
-    } else {
+    } else if (this.player.body.onFloor()) {
       this.playerStand();
     }
 
