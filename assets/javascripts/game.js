@@ -50,7 +50,6 @@ Segredario.Game.prototype = {
   },
 
   createPlayerPhysics: function() {
-    this.player.body.bounce.y = 0.2;
     this.player.body.gravity.y = 300;
     this.player.body.collideWorldBounds = true;
   },
