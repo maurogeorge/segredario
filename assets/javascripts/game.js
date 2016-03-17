@@ -69,6 +69,10 @@ Segredario.Game.prototype = {
   },
 
   playerMoveLeft: function() {
+    if (this.cursors.down.isDown) {
+      return;
+    }
+
     this.currentPlayerDirection = 'left';
     this.player.body.velocity.x = -80;
 
@@ -78,6 +82,10 @@ Segredario.Game.prototype = {
   },
 
   playerMoveRight: function() {
+    if (this.cursors.down.isDown) {
+      return;
+    }
+
     this.currentPlayerDirection = 'right';
     this.player.body.velocity.x = 80;
 
