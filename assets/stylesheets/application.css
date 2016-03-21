@@ -1,8 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/** reset tags HTML5. */
+article, aside, dialog, figure, footer, header,
+hgroup, menu, nav, section, menu {
+  display:block;
+}
+
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 130px;
+  background: url("../../assets/images/background.png");
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  margin: 0 0 20px 0;
+}
+
+h1 {
+  font-size: 0;
+  padding: 5px;
+  text-align: center;
+}
+
+img {
+  border: none;
+}
+
+#game {
+  margin: 0 auto;
+  width:512px;
 }
 
 canvas {
