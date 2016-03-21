@@ -1,4 +1,4 @@
-# Segredário
+# Super Segredário
 
 This project is a game to make a proposal to my girlfriend.
 

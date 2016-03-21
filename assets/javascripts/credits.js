@@ -9,7 +9,7 @@ Segredario.Credits.prototype = {
     this.createText();
     this.createBMG();
 
-    this.createTitle('- Segredário -');
+    this.createTitle('- Super Segredário -');
 
     this.createParagraph('Mauro George');
     this.createTitle('Director');
