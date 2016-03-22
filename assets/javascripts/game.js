@@ -35,10 +35,6 @@ Segredario.Game.prototype = {
     this.holeCollide();
   },
 
-  render: function() {
-    this.game.debug.text(this.game.time.fps || '--', 20, 40, "#00ff00", "16px Courier");
-  },
-
   createPlayer: function() {
     this.player = this.game.add.sprite(10, 183, 'player');
     this.game.physics.arcade.enable(this.player);
