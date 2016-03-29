@@ -20,7 +20,7 @@ Segredario.Credits.prototype = {
     this.createParagraph('José Mauro');
     this.createParagraph('Gilton Monteiro');
     this.createParagraph('Heloisa Pereira');
-    this.createParagraph('Júlio Monteiro');
+    this.createParagraph('Julio Monteiro');
     this.createParagraph('Matheus Brás');
     this.createParagraph('Cayo Medeiros(Yogodoshi)');
     this.createParagraph('Nintendo');
