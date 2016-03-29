@@ -1,6 +1,6 @@
 # Super Segredário
 
-This project is a game to make a proposal to my girlfriend.
+This project is a fangame to make a proposal to my girlfriend.
 
 ## Dependencies
 
