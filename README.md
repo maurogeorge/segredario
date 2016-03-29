@@ -21,3 +21,14 @@ If everything goes OK, you can now run the project!
 
 1. `$ bundle exec jekyll serve` - Start the server
 2. Open [http://localhost:4000](http://localhost:4000)
+
+## Licenses
+
+### Source Code
+
+Super Segredário is released under the [MIT License](http://www.opensource.org/licenses/MIT).
+
+### Assets
+
+All sprites and sounds are property of Nintendo.
+Copyright © 2016 Nintendo Co., Ltd.
