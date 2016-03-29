@@ -2,13 +2,15 @@
 
 This project is a fangame to make a proposal to my girlfriend.
 
+The game can be played at [segredario.maurogeorge.com.br](http://segredario.maurogeorge.com.br/).
+
 ## Disclaimer
 
 Since the main idea is to make a proposal to my girlfriend, and this is my first
 game. I had to do some things quick and dirty, after all I want to becoma a
 groom fast.
 
-So Pull Requests are welcome. Please see CONTRIBUTING.md for details.
+So Pull Requests are welcome. Please see [CONTRIBUTING.md](https://github.com/maurogeorge/segredario/blob/gh-pages/CONTRIBUTING.md) for details.
 
 ## Dependencies
 
