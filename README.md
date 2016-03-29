@@ -7,7 +7,7 @@ The game can be played at [segredario.maurogeorge.com.br](http://segredario.maur
 ## Disclaimer
 
 Since the main idea is to make a proposal to my girlfriend, and this is my first
-game. I had to do some things quick and dirty, after all I want to becoma a
+game. I had to do some things quick and dirty, after all I want to become a
 groom fast.
 
 So Pull Requests are welcome. Please see [CONTRIBUTING.md](https://github.com/maurogeorge/segredario/blob/gh-pages/CONTRIBUTING.md) for details.
