@@ -2,6 +2,14 @@
 
 This project is a fangame to make a proposal to my girlfriend.
 
+## Disclaimer
+
+Since the main idea is to make a proposal to my girlfriend, and this is my first
+game. I had to do some things quick and dirty, after all I want to becoma a
+groom fast.
+
+So Pull Requests are welcome. Please see CONTRIBUTING.md for details.
+
 ## Dependencies
 
 To run this project you need to have:
